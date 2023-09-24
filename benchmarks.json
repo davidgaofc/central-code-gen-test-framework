@@ -1,0 +1,17 @@
+{
+  "benchmark_1": {
+    "folder_name": "benchmark_1",
+    "generation_script": "generate.py",
+    "evaluation_script": "test.py"
+  },
+  "benchmark_2": {
+    "folder_name": "benchmark_2",
+    "generation_script": "generate.py",
+    "evaluation_script": "test.py"
+  },
+  "test_benchmark": {
+    "folder_name": "test_benchmark",
+    "generation_script": "compile.py",
+    "evaluation_script": "eval.py"
+  }
+}
