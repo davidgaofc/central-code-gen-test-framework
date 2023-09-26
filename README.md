@@ -88,7 +88,16 @@ Want to add a new benchmark to our framework? Awesome! Follow these simple steps
     }
     ```
 
-4. **Implement Centralized API Call (Optional)**
+4. **Make Sure your scripts fit the expected output**
+    - Generation Script: Your generation script can do whatever you want.
+    - Evaluation Script: Your evaluation script should output a json structured like the following to stdout (print).
+   ```json
+   {
+    "pass": 99,
+    "fail": 1
+    }
+    ```
+5. **Implement Centralized API Call (Optional)**
 
     If you are loading in multiple benchmarks, it may be beneficial to implement llm_call.py as you see fit so all benchmarks can use the same LLM generation.
 
