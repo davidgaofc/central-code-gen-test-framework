@@ -54,4 +54,44 @@ For any inquiries, issues, or feedback, please open an issue in the repository o
 
 ---
 
+## Instructions for Integrating Your Own Benchmark 🛠
+
+Want to add a new benchmark to our framework? Awesome! Follow these simple steps to seamlessly integrate your benchmark and expand the capabilities of our testing environment:
+
+1. **Clone the Repository (if you haven't already)**
+    ```
+    git clone https://github.com/davidgaofc/central-code-gen-test-framework.git
+    cd central-code-gen-test-framework
+    ```
+
+2. **Move Your Benchmark Directory**
+
+    Transfer your benchmark's directory/folder into the `benchmarks` folder of the project.
+
+    ```
+    mv path/to/your/benchmark benchmarks/
+    ```
+
+    Make sure your benchmark structure is consistent with the conventions described in `benchmarks/README.md`.
+
+3. **Update the `benchmark.json`**
+
+    Navigate to `benchmark.json` and add an entry for your benchmark:
+
+    ```json
+    {
+        "benchmark_name": {
+            "path": "name of your benchmark directory",
+            "generation_script": "your file in the benchmark directory that generates outputs",
+            "evaluation_script": "your file in the benchmark directory that runs the tests"
+        }
+    }
+    ```
+
+4. **Implement Centralized API Call (Optional)**
+
+    If you are loading in multiple benchmarks, it may be beneficial to implement llm_call.py as you see fit so all benchmarks can use the same LLM generation.
+
+---
+
 **Join our community and let's push the boundaries of what generative AI can achieve! 🌟**
